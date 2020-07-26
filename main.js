@@ -18,9 +18,10 @@ const applyFilter = document.querySelector("#apply-filter");
 
 btnFilter.addEventListener("click", () => {
   optionsContainer.classList.toggle("active");
-  selected.classList.toggle("active");
+  rulesContainer.classList.remove("active");
   searchBox.value = "";
   filterList("");
+  selected.classList.toggle("active");
   
   if (optionsContainer.classList.contains("active")) {
       searchBox.focus();

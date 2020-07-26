@@ -51,6 +51,7 @@ hr {
 
 .saved-filters-container {
     max-width: 400px;
+    margin-left: 15px;
     position: absolute;
     top: 140px;
     overflow: hidden;
@@ -63,10 +64,12 @@ hr {
     color: #333;
     opacity: 0;    
     transition-duration: 0.2s;
+    z-index: 3;    
 }
 
 .saved-filters-list {
     width: 200px;
+
     overflow: hidden;
 }
 
@@ -82,12 +85,11 @@ hr {
     color: #333;
     outline-style: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 
 }
 
-.saved-filter option.fa {
-    padding: 5px;
+.saved-filter .fa {
     width: 20px;
     height: 20px;
     color: #999;
@@ -169,6 +171,7 @@ hr {
     overflow: hidden;
     position: relative;
     top: 50px;
+    left: 10px;
 }
 
 .select-box .options-container.active {
@@ -196,6 +199,8 @@ hr {
 }
 
 .selected {
+    display: flex;
+    align-items: center;
     overflow: hidden;
 }
 
@@ -205,6 +210,7 @@ hr {
     border-radius: 10px;
     height: 5px;
     width: fit-content;
+    margin-left: 15px;
 }
 
 /* scrollbar */
@@ -242,6 +248,7 @@ hr {
     border-radius: 0px;
     position: absolute;
     top: 10px;
+    margin-left: 20px;
 }
 
 /* scrollbar for rules */
@@ -276,19 +283,26 @@ hr {
 
 /* Searchbox */
 
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .search-box input {
     margin: 10px;
     width: 250px;
     padding: 10px;
     font-size: 14px;
     border-radius: 8px;
-    z-index: 1;
     border: 1px solid #E9E9E9;
     opacity: 0;
     pointer-events: none;
     transition: all 0.4s;
     position: absolute;
-    top: 20px;
+    top: 15px;
+
+    z-index: 1;
 }
 
 .search-box input:focus {
