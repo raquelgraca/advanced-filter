@@ -1,0 +1,320 @@
+body {
+    background-color: #F1F1F1;
+    font-size: 14px;
+    max-width: 1100px;
+    height: 100vh;
+    margin: 30px auto;
+}
+
+hr {
+    border-top: 1px solid #E9E9E9;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 100px;
+    background-color: #ffffff;
+    max-width: 1100px;
+    height: 100vh;
+}
+
+.filters-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10vh;
+  margin-top: 25px;
+  max-width: 400px;
+  position: relative;
+}
+
+.btn-saved-filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    padding: 5px;
+    height: 40px;
+    width: 150px;
+    border: 1px solid #E9E9E9;
+    border-radius: 5px;
+    outline: none;
+    transition-duration: 0.4s;
+    background: #ffffff;
+    color: #999;
+    order: 0;
+    cursor: pointer;
+
+}
+
+.saved-filters-container {
+    max-width: 400px;
+    position: absolute;
+    top: 140px;
+    overflow: hidden;
+}
+
+.saved-filters-container.active {
+    max-height: 240px;
+    width: 200px;
+    background: #fff;
+    color: #333;
+    opacity: 0;    
+    transition-duration: 0.2s;
+}
+
+.saved-filters-list {
+    width: 200px;
+    overflow: hidden;
+}
+
+.saved-filter {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    padding: 8px;;
+    border-radius: 5px;
+    border-color: #E9E9E9;
+    background-color: white;
+    color: #333;
+    outline-style: none;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.saved-filter option.fa {
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+    color: #999;
+}
+
+/* button appears after rules selected */
+.btn-save {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    height: 40px;
+    width: 100px;
+    outline-style: none;
+    border-style: none;
+    background: #ffffff;
+    color: #999;
+    cursor: pointer;
+}
+
+/* filter button */
+
+.btn-filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    padding: 5px;
+    height: 40px;
+    width: 80px;
+    border: 1px solid #E9E9E9;
+    border-radius: 5px;
+    outline: none;
+    transition-duration: 0.4s;
+    background: #ffffff;
+    color: #999;
+    position: relative;
+    order: 0;
+    cursor: pointer;
+
+}
+.btn-filter.fa {
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    color: #999;
+}
+
+.btn-filter:focus {
+    background-color: #999;
+    color: #fff;
+}
+
+.btn-filter.fa:focus{
+    color: #fff;
+}
+
+/* DropdownCard */
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    vertical-align: center;
+    position: relative;
+    z-index: 100;
+}
+.select-box {
+    display: flex;
+    max-width: 300px;
+    flex-direction: column;
+    z-index: 0;
+}
+
+.select-box .options-container {
+    background: #fff;
+    color: #333;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    overflow: hidden;
+    position: relative;
+    top: 50px;
+}
+
+.select-box .options-container.active {
+    max-height: 240px;
+    opacity: 1;
+    overflow-y: scroll;
+    border-radius: 0px;
+    outline: 1px solid #E9E9E9;
+}
+
+.select-box .option {
+    padding: 12px 24px;
+}
+
+.select-box .option:hover {
+    background: #EDEDED;
+}
+
+.select-box label {
+    cursor: pointer;
+}
+
+.radio {
+    display: none;
+}
+
+.selected {
+    overflow: hidden;
+}
+
+.selected.active {
+    background-color: #E9E9E9;
+    padding: 10px;
+    border-radius: 10px;
+    height: 5px;
+    width: fit-content;
+}
+
+/* scrollbar */
+
+.select-box .options-container::-webkit-scrollbar {
+    width: 5px;
+    background: #ffffff;
+    border-radius: 0px;
+}
+
+.select-box .options-container::-webkit-scrollbar-thumb {
+    background: #999999;
+    border-radius: 5px;
+}
+
+/* rules-list dropdown */
+
+.rules-container {
+    background: #fff;
+    color: #333;
+    max-width: 300px;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 8px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.rules-container.active {
+    max-height: 200px;
+    opacity: 1;
+    overflow-y: scroll;
+    margin-top: 15px;
+    border: 1px solid #E9E9E9;
+    border-radius: 0px;
+    position: absolute;
+    top: 10px;
+}
+
+/* scrollbar for rules */
+
+.rules-container::-webkit-scrollbar {
+    width: 5px;
+    background: #ffffff;
+    border-radius: 0px;
+}
+
+.rules-container::-webkit-scrollbar-thumb {
+    background: #999999;
+    border-radius: 5px;
+}
+
+#rules-list label {
+    padding: 16px;
+    cursor: pointer;
+}
+
+#rules-list .rules .radio {
+    display: none;
+}
+
+.rules {
+    padding: 12px 24px;
+}
+
+.rules:hover {
+    background: #EDEDED;
+}
+
+/* Searchbox */
+
+.search-box input {
+    margin: 10px;
+    width: 250px;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 8px;
+    z-index: 1;
+    border: 1px solid #E9E9E9;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s;
+    position: absolute;
+    top: 20px;
+}
+
+.search-box input:focus {
+    outline: 1px;
+}
+.select-box .options-container.active ~ .search-box input {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#apply-filter {
+    background: #fff;
+    color: #333;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 8px;
+    outline-style: 1px solid #E9E9E9;
+    order: 1;
+}
+
+#apply-filter.active {
+    max-height: 240px;
+    opacity: 1;
+    overflow-y: scroll;
+    margin-top: 15px;
+    border-radius: 0px;
+}
