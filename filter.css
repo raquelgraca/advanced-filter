@@ -1,0 +1,40 @@
+
+.btn-filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    padding: 5px;
+    height: 40px;
+    width: 80px;
+    border: 1px solid #E9E9E9;
+    border-radius: 5px;
+    outline: none;
+    transition-duration: 0.4s;
+    background: #ffffff;
+    color: #999;
+    cursor: pointer;
+}
+
+#select-1 {
+
+}
+
+
+#select-2 {
+}
+
+.selected {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.selected {
+    background-color: #E9E9E9;
+    padding: 10px;
+    border-radius: 10px;
+    height: 5px;
+    width: fit-content;
+    margin-left: 15px;
+}

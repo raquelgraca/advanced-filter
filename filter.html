@@ -51,63 +51,52 @@
             <div class="select-box">
 
                 <div class="selected">
-                    <label id="new-filter"></label>
+                    <label id="new-filter">Select Attribute</label>
                 </div>
-                <div class="selected2">
-                    <label id="new-filter"></label>
-                </div>
-
+                  <!--Level 1 MENU -->
                 <div class="options-container">
                     <div class="option">
                         <input type="radio" class="radio" id="customer-name" name="category" />
                         <label for="customer-name">Customer Name</label>
                     </div>
-
                     <div class="option">
                         <input type="radio" class="radio" id="customer-id" name="category" />
                         <label for="customer-id">Customer id</label>
                     </div>
-
                     <div class="option">
                         <input type="radio" class="radio" id="status" name="category" />
                         <label for="status">Status</label>
                     </div>
-
                     <div class="option">
                         <input type="radio" class="radio" id="balance" name="category" />
                         <label for="balance">Balance</label>
                     </div>
-
                     <div class="option">
                         <input type="radio" class="radio" id="billing-start-date" name="category" />
                         <label for="billing-start-date">Billing Start Date</label>
                     </div>
-
                     <div class="option">
                         <input type="radio" class="radio" id="taxable" name="category" />
                         <label for="taxable">Taxable</label>
                     </div>
-
                     <div class="option">
                         <input type="radio" class="radio" id="parent-customer" name="category" />
                         <label for="parent-customer">Parent Customer Name</label>
                     </div>
-
                     <div class="option">
                         <input type="radio" class="radio" id="currency" name="category" />
                         <label for="currency">Currency</label>
                     </div>
-
                     <div class="option">
                         <input type="radio" class="radio" id="auto-pay" name="category" />
                         <label for="auto-pay">Auto Pay</label>
                     </div>
-                </div>
+                </div>                
                 <div class="search-box">
                     <input type="text" placeholder="Search" />
                     <!-- <i class="fa fa-search" aria-hidden="true"></i> -->
                 </div>
-
+                <!--Level 2 MENU -->
                 <div class="rules-container">
                     <div class="rules-list">
                         <div class="rules">
@@ -136,17 +125,17 @@
                         </div>
                     </div>
                 </div>
-
+                <!--Level 3 MENU -->
                 <div id="apply-filter">
                     <div class="rule-applied">
                         <input type="radio" class="radio" id="string-text-is" name="rules" />
-                        <label for="string-text-is"></label>
-                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                        <label for="string-text-is">is</label>
                     </div>
                     <div class="string-input">
-                        <input type="text" placeholder="Swipe">                        
+                        <input type="text" class="radio" id="string-input" name="rules" />
+                        <label for="string-input"></label>
                     </div>
-                    <button class="btn-apply-filter">Apply Filter</button>
+                    <button>Apply Filter</button>
                 </div>
             </div>
         </div>

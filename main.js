@@ -11,7 +11,9 @@ const rulesContainer = document.querySelector(".rules-container");
 const rulesList = document.querySelectorAll(".rules");
 
 const searchBox = document.querySelector(".search-box input");
+
 const selected = document.querySelector(".selected");
+const selected2 = document.querySelector(".selected2");
 
 const applyFilter = document.querySelector("#apply-filter");
 
@@ -19,9 +21,11 @@ const applyFilter = document.querySelector("#apply-filter");
 btnFilter.addEventListener("click", () => {
   optionsContainer.classList.toggle("active");
   rulesContainer.classList.remove("active");
+  applyFilter.classList.remove("active");
   searchBox.value = "";
   filterList("");
   selected.classList.toggle("active");
+  selected.innerHTML = "Select Attribute";
   
   if (optionsContainer.classList.contains("active")) {
       searchBox.focus();
@@ -35,16 +39,13 @@ btnSavedFilter.addEventListener("click", () => {
 
 optionsList.forEach(o => {
     o.addEventListener("click", () => {
-        const optionSelected  = [];
-        optionSelected.push(selected.innerHTML = o.querySelector("label").innerHTML);
-        selected.innerHTML = optionSelected;
+        selected.innerHTML = o.querySelector("label").innerHTML;
         optionsContainer.classList.remove("active");
         rulesContainer.classList.add("active");
             rulesList.forEach(r => {
                 r.addEventListener("click", () => {
-                    optionSeleted.push(selected.innerHTML = r.querySelector("label").innerHTML);
-                    selected.innerHTML = optionSelected;
-                    rulesList.classList.remove("active");
+                    selected.innerHTML = r.querySelector("label").innerHTML;
+                    rulesContainer.classList.remove("active");
                     applyFilter.classList.add("active");
                     })
         })
